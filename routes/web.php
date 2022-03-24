@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AutoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/auto', [AutoController::class, 'index'])->name('auto.index');
+Route::get('/auto/create', [AutoController::class, 'create'])->name('auto.create');
+Route::post('/auto/store', [AutoController::class, 'store'])->name('auto.store');
