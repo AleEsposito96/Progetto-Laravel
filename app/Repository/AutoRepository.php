@@ -13,12 +13,24 @@ use App\Models\Annunci;
 
         public function createAnnuncio(array $data)
         {
-            Annunci::insert([
+                Annunci::insert([
                 'picture' => $data['picture'],
                 'title' => $data['title'],
                 'price' => $data['price'],
                 'description' => $data['description'],
-            ]);
+             ]  );
+
+            /*
+            $auto = new Annunci();
+            $auto ->picture = $data['picture'];
+            $auto->title = $data['title'];
+            $auto->price = $data['price'];
+            $auto->description = $data['description'];
+    
+    
+            $auto->save();
+
+            */
         }
 
         public function getSingleAnnuncio($id)

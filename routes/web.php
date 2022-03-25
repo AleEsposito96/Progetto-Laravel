@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AutoController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,7 @@ Route::post('/auto/store', [AutoController::class, 'store'])->name('auto.store')
 Route::get('/auto/{id}', [AutoController::class, 'show'])->name('auto.show');
 Route::get('/auto/edit/{id}', [AutoController::class, 'edit'])->name('auto.edit');
 Route::post('/auto/update/{id}', [AutoController::class, 'update'])->name('auto.update');
+
+
+// comment module
+Route::post('/auto/{id}', [CommentController::class, 'addComment'])->name('auto.comment.add');
