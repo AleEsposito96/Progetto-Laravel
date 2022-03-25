@@ -27,3 +27,6 @@ require __DIR__.'/auth.php';
 Route::get('/auto', [AutoController::class, 'index'])->name('auto.index');
 Route::get('/auto/create', [AutoController::class, 'create'])->name('auto.create');
 Route::post('/auto/store', [AutoController::class, 'store'])->name('auto.store');
+Route::get('/auto/{id}', [AutoController::class, 'show'])->name('auto.show');
+Route::get('/auto/edit/{id}', [AutoController::class, 'edit'])->name('auto.edit');
+Route::post('/auto/update/{id}', [AutoController::class, 'update'])->name('auto.update');
