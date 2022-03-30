@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AutoController;
 use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+// admin
+Route::get('/admin/auto', [AdminController::class, 'adminGetAllAuto'])->name('admin.auto');
+Route::get('/admin/auto/comments', [AdminController::class, 'adminGetAllComments'])->name('admin.auto.comments');
+Route::delete('/admin/auto/{id}', [AdminController::class, 'adminDeleteAuto'])->name('admin.auto.delete');
+Route::delete('/admin/auto/comments/{id}', [AdminController::class, 'adminDeleteComments'])->name('admin.auto.comments.delete');
 
 Route::get('/auto', [AutoController::class, 'index'])->name('auto.index');
 Route::get('/auto/create', [AutoController::class, 'create'])->name('auto.create');

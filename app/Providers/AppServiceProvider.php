@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Repository\AdminRepository;
 use App\Repository\AutoRepository;
+use App\Repository\IAdminRepository;
 use App\Repository\IAutoRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,6 +18,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(IAutoRepository::class, AutoRepository::class);
+        $this->app->bind(IAdminRepository::class, AdminRepository::class);
     }
 
     /**

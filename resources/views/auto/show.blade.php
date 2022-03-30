@@ -30,11 +30,10 @@
           <h3>All Comments</h3>
 
           <div class="comments p-2 m-2" style="background-color: rgb(232, 251, 246)">
-            @foreach ($auto->comments as $comment)
-            <h5>{{ $comment->comment }} ( {{ $comment->rating }} )</h5>
-            <hr>
-        @endforeach
+
+            
           </div>
+          
 
           
           <h3>Add a comment ...</h3>
