@@ -23,6 +23,7 @@
                         @foreach ($auto as $auto)
                             <tr>
                                 <th scope="row">{{ $auto->id }}</th>
+                                <td>{{ $auto->picture }}</td>
                                 <td>{{ $auto->title }}</td>
                                 <td>{{ $auto->price }}</td>
                                 <td>{{ $auto->description }}</td>
@@ -33,7 +34,7 @@
                                     <form action=" {{ route('admin.auto.delete', $auto->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-danger" type="submit">Delete</button>
+                                        <button class="btn btn-danger">Delete</button>
                                     </form>
                                 </td>
                             </tr>

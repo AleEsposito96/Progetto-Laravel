@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AutoController;
 use App\Http\Controllers\CommentController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,10 +29,16 @@ require __DIR__.'/auth.php';
 
 
 // admin
-Route::get('/admin/auto', [AdminController::class, 'adminGetAllAuto'])->name('admin.auto');
-Route::get('/admin/auto/comments', [AdminController::class, 'adminGetAllComments'])->name('admin.auto.comments');
-Route::delete('/admin/auto/{id}', [AdminController::class, 'adminDeleteAuto'])->name('admin.auto.delete');
-Route::delete('/admin/auto/comments/{id}', [AdminController::class, 'adminDeleteComments'])->name('admin.auto.comments.delete');
+
+Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
+    Route::get('/auto', [AdminController::class, 'adminGetAllAuto'])->name('admin.auto');
+    Route::get('/auto/comments', [AdminController::class, 'adminGetAllComments'])->name('admin.auto.comments');
+    Route::delete('/auto/{id}', [AdminController::class, 'adminDeleteAuto'])->name('admin.auto.delete');
+    Route::delete('/auto/comments/{id}', [AdminController::class, 'adminDeleteComments'])->name('admin.auto.comments.delete');
+});
+
+
+
 
 Route::get('/auto', [AutoController::class, 'index'])->name('auto.index');
 Route::get('/auto/create', [AutoController::class, 'create'])->name('auto.create');
@@ -43,3 +50,7 @@ Route::post('/auto/update/{id}', [AutoController::class, 'update'])->name('auto.
 
 // comment module
 Route::post('/auto/{id}', [CommentController::class, 'addComment'])->name('auto.comment.add');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

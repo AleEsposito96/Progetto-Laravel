@@ -8,6 +8,7 @@ use App\Repository\IAdminRepository;
 use App\Repository\IAutoRepository;
 use Illuminate\Support\ServiceProvider;
 
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
