@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('content')
 
 <div class="container mt-5 mb-5">
 
-    <h2>Update Annuncio</h2>
+    <h2>Update</h2>
     <hr>
 
     <form action="{{ route('auto.update', $auto->id) }}" enctype="multipart/form-data" method="POST">
@@ -30,7 +30,7 @@
             <textarea class="form-control" name="description" id="description" placeholder="Enter Description">{{ $auto->description }}</textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Update Annuncio</button>
+          <button class="btn btn-primary">Update</button>
 
     </form>
 
