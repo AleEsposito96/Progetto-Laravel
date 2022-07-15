@@ -4,7 +4,7 @@
 
 <div class="container mt-5 mb-5">
 
-    <h2>Update</h2>
+    <h2>Update ads</h2>
     <hr>
 
     <form action="{{ route('auto.update', $auto->id) }}" enctype="multipart/form-data" method="POST">

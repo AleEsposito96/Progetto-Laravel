@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1 class="text-center">Admin All Auto Comments</h1>
+<h1 class="text-center">Admin All Cars Comments</h1>
 <br>
 
 
@@ -12,7 +12,7 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">Auto Id</th>
+                        <th scope="col">Cars Id</th>
                         <th scope="col">Id</th>
                         <th scope="col">Comment</th>
                         <th scope="col">Rating</th>

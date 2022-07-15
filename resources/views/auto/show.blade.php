@@ -15,11 +15,11 @@
                 <img class="img-fluid" src="/images/{{ $auto->picture }}" width="600px" alt="...">
                 <div class="container m-2 p-2">
                   <h2 style="font-weight: bold">{{ $auto->title }}</h2>
-                  <h3>Prezzo: €{{ $auto->price }}</h3>
+                  <h3>Price: €{{ $auto->price }}</h3>
                   <hr>
                   <h5>{{ $auto->description }}</h5>
                   <a href="{{ route('auto.index') }}" class="btn btn-success">Go Home</a>
-                  <a href="{{ route('auto.edit', $auto->id) }}" class="btn btn-primary">Edit</a>
+                  
                 </div>
               </div>
 
@@ -55,7 +55,7 @@
                     <input type="number" class="form-control" name="rating" id="rating" placeholder="Enter Rating">
                 </div>
 
-                  <button  id="addCommentBtn" class="btn btn-success"> <a style="color: white" href="#">comment</a></button>
+                  <button  id="addCommentBtn" class="btn btn-success"> <a style="color: white" href="#">Comment</a></button>
 
             </form>
          

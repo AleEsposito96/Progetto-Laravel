@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card p-3">
-                <h1 class="display-4">Annunci Auto!</h1>
-                    <p class="lead">Questa è una semplice app di esempio costruita con Laravel</p>
+                <h1 class="display-4">Car ads !!!</h1>
+                    <p class="lead">This is a simple example app built with Laravel</p>
                     
             </div>
         </div>

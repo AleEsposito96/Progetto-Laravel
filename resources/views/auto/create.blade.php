@@ -4,7 +4,7 @@
 
 <div class="container mt-5 mb-5">
 
-    <h2>Create Annuncio</h2>
+    <h2>Create ads</h2>
     <hr>
 
     <form action="{{ route('auto.store')}}" enctype="multipart/form-data" method="post">
@@ -30,7 +30,7 @@
             <textarea class="form-control" name="description" id="description" placeholder="Enter Description"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Create Annuncio</button>
+          <button type="submit" class="btn btn-primary">Create</button>
 
     </form>
 

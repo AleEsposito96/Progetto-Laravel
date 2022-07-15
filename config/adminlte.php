@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Portale annunci auto',
+    'title' => 'Car announcements portal',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -263,11 +263,11 @@ return [
             'icon'    => 'fas fa-solid fa-bars',
             'submenu' => [
                 [
-                    'text' => 'All auto',
+                    'text' => 'All cars',
                     'url'  => 'auto',
                 ],
                 [
-                    'text'    => 'Add auto',
+                    'text'    => 'Add cars',
                     'url'     => 'admin/auto',
                 ]
             ],

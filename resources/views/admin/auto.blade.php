@@ -3,7 +3,7 @@
 @section('content')
 
 
-<h1 class="text-center" style="margin-top: 4px";><b>Admin All Table Auto<b></h1>
+<h1 class="text-center" style="margin-top: 4px";><b>Admin All Table Cars<b></h1>
 <br>
 
 <div class="container">
